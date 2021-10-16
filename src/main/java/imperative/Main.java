@@ -43,7 +43,7 @@ public class Main {
         System.out.println("lets see who are the females in the list");
         System.out.println("// declarative approach");
 
-        Predicate<Person> personPredicate=person -> Gender.FEMALE.equals(person.gender);
+        Predicate<Person> personPredicate=element -> Gender.FEMALE.equals(element.gender);
 
 
 
@@ -52,7 +52,10 @@ public class Main {
                 .collect(Collectors.toList());
         femaleList.forEach(System.out::println);
 
+
+
     }
+
 
     static class Person {
 
