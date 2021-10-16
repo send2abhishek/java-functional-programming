@@ -1,5 +1,6 @@
 package functions;
 
+import java.util.function.BiFunction;
 import java.util.function.Function;
 
 public class _Functions {
@@ -11,6 +12,9 @@ public class _Functions {
 
         Function<Integer, Integer> addAndMultiply = incrementByOne.andThen(multiplyBy10);
 
+        BiFunction<Integer,Integer,Integer> incrementAndMultiply=(num1,num2)-> (num1+1) * num2;
+
         System.out.println(addAndMultiply.apply(10));
+        System.out.println("increment and multiply "+incrementAndMultiply.apply(10,10));
     }
 }
