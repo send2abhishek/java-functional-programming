@@ -7,8 +7,10 @@ public class _Functions {
     public static void main(String[] args) {
 
         Function<Integer, Integer> incrementByOne = number -> number + 1;
+        Function<Integer, Integer> multiplyBy10 = number -> number * 10;
 
-        Integer result = incrementByOne.apply(10);
-        System.out.println(result);
+        Function<Integer, Integer> addAndMultiply = incrementByOne.andThen(multiplyBy10);
+
+        System.out.println(addAndMultiply.apply(10));
     }
 }
