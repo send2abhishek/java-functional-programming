@@ -20,7 +20,10 @@ public class Main {
         });
 
         // to create the list whose gender is female
+
+        // imperative approach
         System.out.println("lets see who are the females in the list");
+        System.out.println("// imperative approach");
         List<Person> females = new ArrayList<>();
 
         people.forEach(person -> {
@@ -33,6 +36,14 @@ public class Main {
         females.forEach(person -> {
             System.out.println(person.toString());
         });
+
+        // declarative approach
+        System.out.println("lets see who are the females in the list");
+        System.out.println("// declarative approach");
+
+        people.stream().
+                filter(person -> Gender.FEMALE.equals(person.gender)).
+                forEach(System.out::println);
 
     }
 
