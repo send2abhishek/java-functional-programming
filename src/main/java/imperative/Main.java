@@ -1,5 +1,6 @@
 package imperative;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -17,6 +18,22 @@ public class Main {
         people.forEach(person -> {
             System.out.println(person.toString());
         });
+
+        // to create the list whose gender is female
+        System.out.println("lets see who are the females in the list");
+        List<Person> females = new ArrayList<>();
+
+        people.forEach(person -> {
+
+            if (Gender.FEMALE.equals(person.gender)) {
+                females.add(person);
+            }
+        });
+
+        females.forEach(person -> {
+            System.out.println(person.toString());
+        });
+
     }
 
     static class Person {
