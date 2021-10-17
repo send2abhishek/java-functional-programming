@@ -1,5 +1,7 @@
 package functionalInterface.stream;
 
+import java.util.Optional;
+
 public class Employee {
 
     private String name;
@@ -29,8 +31,8 @@ public class Employee {
         this.gender = gender;
     }
 
-    public String getWork() {
-        return work;
+    public Optional<String> getWork() {
+        return Optional.ofNullable(work);
     }
 
     public void setWork(String work) {

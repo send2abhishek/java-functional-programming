@@ -30,6 +30,11 @@ public class _Stream {
         // remove duplicates
         people.stream().map(person -> person.gender).collect(Collectors.toSet()).forEach(System.out::println);
 
+        boolean resultMale = people.stream().allMatch(person -> person.gender.equals(Gender.MALE));
+        System.out.println(resultMale);
+
+
+
     }
 
 
