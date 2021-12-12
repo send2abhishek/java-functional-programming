@@ -17,6 +17,8 @@ public class MockData {
                 new Person(6, "Raj", "Kumar", "hmarling1@moonfruit.com", "Male", 38),
                 new Person(7, "Rahul", "Verma", "hmarling1@moonfruit.com", "Female", 38),
                 new Person(7, "Sugandha", "gupta", "hmarling1@moonfruit.com", "Female", 26),
+                new Person(7, "janvi", "singh", "hmarling1@moonfruit.com", "Female", 25),
+                new Person(7, "Sugandha", "gupta", "hmarling1@moonfruit.com", "Female", 26),
                 new Person(7, "janvi", "singh", "hmarling1@moonfruit.com", "Female", 25)
 
         );

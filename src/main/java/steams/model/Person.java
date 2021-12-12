@@ -1,6 +1,8 @@
 package steams.model;
 
 
+import java.util.Objects;
+
 public class Person {
 
     final Integer id;
@@ -54,5 +56,18 @@ public class Person {
                 ", gender='" + gender + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return firstName.equals(person.firstName) && lastName.equals(person.lastName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName);
     }
 }
