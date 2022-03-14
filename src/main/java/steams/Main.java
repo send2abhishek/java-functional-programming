@@ -42,6 +42,7 @@ public class Main {
         System.out.println("min number is " + minNumber.get());
 
         numbers.stream().sorted((a, b) -> a > b ? 1 : -1).forEach((a) -> System.out.println(a));
+       // numbers.stream().sorted((a,b)->a>b?1:-1).forEach(a-> System.out.println(a));
 
     }
 
@@ -50,20 +51,20 @@ public class Main {
     }
 
     private static void femalesSumCount() {
-        int female = getData().stream().filter(person -> person.getGender()
+        int female = getData().stream()
+                .filter(person -> person.getGender()
                         .equalsIgnoreCase("female"))
-                .mapToInt(person -> person.getAge()).sum();
+                .mapToInt(Person::getAge).sum();
         System.out.println(female);
     }
 
 
     public static void main(String[] args) {
 
-//        filterList();
-//        intStreamTest();
-//        minNumber();
- //       removeDuplicates();
-
+  //filterList();
+     //  intStreamTest();
+       //minNumber();
+        //removeDuplicates();
         femalesSumCount();
     }
 
